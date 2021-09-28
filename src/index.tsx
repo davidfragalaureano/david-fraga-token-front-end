@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Token } from "./components/Token";
+import contractInfo from "./contract.json";
+
+// We import bootstrap here, but you can remove if you want
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import'bootstrap-css-only/css/bootstrap.min.css'; 
+import'mdbreact/dist/css/mdb.css';
+
+// This is the entry point of your application, but it just renders the Dapp
+// react component. All of the logic is contained in it.
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Token contractAddress={contractInfo.address}/>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
