@@ -1,0 +1,3 @@
+[submodule "david-fraga-token"]
+	path = david-fraga-token
+	url = https://github.com/davidfragalaureano/david-fraga-token.git
